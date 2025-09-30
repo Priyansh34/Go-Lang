@@ -1,0 +1,7 @@
+{
+    "editor.inlineSuggest.edits.showCollapsed": true,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "github.copilot.nextEditSuggestions.enabled": true,
+    "emmet.useInlineCompletions": true,
+    "inlineChat.hideOnRequest": true
+}

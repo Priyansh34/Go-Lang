@@ -1,0 +1,88 @@
+GO Lang Notes:
+
+
+package main //every go program starts only with package .... main is name of the package, it can be different as well
+
+
+import "fmt" //import fmt package to use it's methods and functions in our program
+
+func main() // this is the main function of our program
+{
+	//fmt.Println("Hello, Priyansh! Welcome to Go programming.")
+	//fmt.Println("I hope you have a great time learning Go!")
+
+	//declare a variable
+	// var = varialible devclaration
+	// whatToSay = variable name
+	// string = data type
+	// "Hello, Priyansh!" = value assigned to the variable
+	var whatToSay string
+	whatToSay = "Hello, Priyansh! again"
+
+	//Another way to declare and assign value to a variable
+	// whatToSay := "Hello, Priyansh! again"
+	//:= is a shorthand for declaring and assigning a variable in one line
+	//This is only allowed inside functions
+
+	myName := "Priyansh"
+	fmt.Println("My name is", myName)
+
+	sayHelloWorld(whatToSay)
+}
+
+func sayHelloWorld(whatToSay string) {
+	fmt.Println(whatToSay)
+}
+
+
+
+
+QQ. How to create our own package in Go Lang?
+
+- Before creating a new package, we have to do some changes in our application. for that:
+- go to terminal/command prompt and run below command:
+	go mod init myapp (myapp is the app name)
+- it creates a new file called go.mod
+- go.mod file holds the app details and version details in it
+- download doctor.go file -> cory in notpad
+- create a new folder in Go_Lang folder with named doctor
+- create a new file in this folder named doctor.go and paste the whole text into this file and save it.
+
+func Intro() string{
+	return
+} // this function intro doesn't take any parameter as input but returns string.
+
+- now call the function from doctor.go file.
+- as it's not imported so we have to create our own package and have to import it
+
+*********
+
+package main
+
+import (
+	"fmt"
+	"myapp/doctor"
+) // immporting multiple packages at the same time.
+
+func main() {
+
+	var whatToSay string
+
+	/* Intro returns the intro text
+	   This Intro function doesn't take any parameters and returns a string. this function is defined in doctor.go file
+
+	   func Intro() string {
+	   	return `
+	   I'm Eliza
+	   ---------
+	   Talk to the program by typing in plain English, using normal upper
+	   and lower-case letters and punctuation.  Enter 'quit' when done.
+
+	   Hello. How are you feeling today?`
+	   }
+	*/
+	whatToSay = doctor.Intro()
+
+	fmt.Println(whatToSay)
+
+}
