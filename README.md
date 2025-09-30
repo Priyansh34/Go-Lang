@@ -9,8 +9,8 @@ It includes simple examples, exercises, and small projects to strengthen my unde
 
 ## Contents 📂
 
-* Basic programs (Hello World, loops, conditions, functions)
-* Array, Struct, Slice, Maps, Strings, Time etc in Go
+* Basic programs (Packages, Hello World, loops, conditions, functions)
+* Array, Struct, Slice, Maps, Strings, Time functions in Go
 * File handling, concurrency examples, and error handling in Go
 * Small projects (like Bank Management System)
 
